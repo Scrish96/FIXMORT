@@ -11,9 +11,9 @@ function moto_repa(){
     });
 }
 
-function trac_moto(){
+function detalle_ot(){
     $(document).ready(function () {
-      $('#content').load('./pages/trac_moto.html');
+      $('#content').load('./pages/detalle-ot.html');
     });
 }
 
@@ -42,7 +42,7 @@ function Agregar_piezas(){
 
 function reg_usuario(){
   $(document).ready(function () {
-    $('#content').load('./pages/buscar-pieza.html');
+    $('#content').load('./pages/registrar-usuario.html');
     
   });
 }
@@ -85,6 +85,13 @@ function bus_persona(){
 function reg_cotiz(){
   $(document).ready(function () {
     $('#content').load('./pages/reg-cotiz.html');
+
+  });
+}
+
+function buscar_ot(){
+  $(document).ready(function () {
+    $('#content').load('./pages/buscar-orden-ot.html');
 
   });
 }
