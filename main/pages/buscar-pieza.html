@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Persona</title>
+    <link rel="stylesheet" href="./css/buscar-pieza.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tutorial DataTables</title>
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- CSS personalizado --> 
+    <link rel="stylesheet" href="main.css">  
+      
+      
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+    <div class="form-content">
+        <div class="l-form">
+            <form action="" method="POST" id="formulario" class="formulario">
+                <h1 class="formulario__titulo">Búsqueda de Pieza</h1>
+                <div class="flexbox">
+                    <div class="formulario__div">
+                        <input type="text" name="nombre" id="nombre" class="formulario__input" placeholder=" ">
+                        <label for="nombre" class="formulario__label">Nombre de la Pieza</label>
+                    </div>
+                    <div class="formulario__div">
+                    <div style="text-align:center;">
+                        <button type="submit" class="formulario__boton-single slide"><span>Buscar Pieza</span></button>
+                    </div>
+                    </div>
+                </div>
+                <div class="tabla-contenedor">    
+                        <table id="example" class="tabla">
+                            <thead>
+                                <tr>
+                                    <th>ID PIEZA</th>
+                                    <th>NOMBRE</th>
+                                    <th>DESCRIPCION</th>
+                                    <th>STOCK</th>
+                                    <th>EDITAR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Tornillo</td>
+                                    <td>15 pulgadas</td>
+                                    <td>100</td>
+                                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Clavo</td>
+                                    <td>Acero de concreto</td>
+                                    <td>500</td>
+                                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                                </tr>              
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Bobina</td>
+                                    <td>Cobre nuevo</td>
+                                    <td>300</td>
+                                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>0004</td>
+                                    <td>Pintura</td>
+                                    <td>Satinado</td>
+                                    <td>200</td>
+                                    <td><i class="fa-regular fa-pen-to-square"></i></td>
+                                </tr>          
+                            </tbody>        
+                        </table>         
+                        <div class="pie-tabla">
+                            <div class="lista-elementos">
+                                Ver
+                                <select name="n-entradas" id="n-entradas" class="n-entradas"> 
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="15">15</option>
+                                </select>
+                                filas
+                            </div>
+                            <div class="paginas">
+                                <ul>
+                                    <li><span class="active">1</span></li>
+                                    <li><button>2</button></li>
+                                    <li><button>3</button></li>
+                                    <li><button>4</button></li>
+                                    <li><span>...</span></li>
+                                    <li><button>9</button></li>
+                                    <li><button>10</button></li>
+                                </ul>
+                            </div>
+                        </div>    
+          
+                </div>    
+                <p class="warnings" id="warnings"></p>
+                <div class="formulario__div-botones" style="text-align:center;">
+                    <input type="submit" class="formulario__boton slide" value="Añadir Nueva Pieza">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <script type="text/javascript" src="main.js"></script> 
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    function stateCheck($formularioSelectInput){
+        if($formularioSelectInput.val().length > 0) {
+            $formularioSelectInput.addClass('valid');
+        }else{
+            $formularioSelectInput.removeClass('valid');
+        }
+    }
+
+    $(function(){
+
+        $('.formulario__select-input').on('focusout',function(){
+            stateCheck($(this));
+        });
+
+    });
+</script>  
+</html>

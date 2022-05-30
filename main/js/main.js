@@ -11,9 +11,9 @@ function moto_repa(){
     });
 }
 
-function trac_moto(){
+function detalle_ot(){
     $(document).ready(function () {
-      $('#content').load('./pages/trac_moto.html');
+      $('#content').load('./pages/detalle-ot.html');
     });
 }
 
@@ -22,10 +22,21 @@ function esta_mate(){
       $('#content').load('./pages/esta_mate.html');
     });
 }
+function mod_piezas_existentes(){
+  $(document).ready(function () {
+    $('#content').load('./pages/mod-piezas-existentes.html');
+  });
+}
 
-function web_design(){
+function buscar_piezas(){
+  $(document).ready(function () {
+    $('#content').load('./pages/buscar-pieza.html');
+  });
+}
+
+function Agregar_piezas(){
     $(document).ready(function () {
-      $('#content').load('./pages/web_design.html');
+      $('#content').load('./pages/agregar-pieza.html');
     });
 }
 
@@ -74,6 +85,13 @@ function bus_persona(){
 function reg_cotiz(){
   $(document).ready(function () {
     $('#content').load('./pages/reg-cotiz.html');
+
+  });
+}
+
+function buscar_ot(){
+  $(document).ready(function () {
+    $('#content').load('./pages/buscar-orden-ot.html');
 
   });
 }
