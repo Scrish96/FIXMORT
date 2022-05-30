@@ -23,9 +23,9 @@ function esta_mate(){
     });
 }
 
-function web_design(){
+function mod_piezas_existentes(){
     $(document).ready(function () {
-      $('#content').load('./pages/web_design.html');
+      $('#content').load('./pages/mod-piezas-existentes.html');
     });
 }
 
