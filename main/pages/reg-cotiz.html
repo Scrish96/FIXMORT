@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="./css/reg-cotiz.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-content">
+        <div class="l-form">
+            <form action="" method="POST" id="formulario" class="formulario">
+                <h1 class="formulario__titulo">Registro de Cotizaciones</h1>
+                <div class="flexbox">
+                    <fieldset class="formulario__campo empresa">
+                        <legend>Datos de la empresa</legend>
+                        <div class="formulario__div">
+                            <input type="number" name="ruc" id="RUC" class="formulario__input" placeholder=" ">
+                            <label for="ruc" class="formulario__label">RUC</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="nombreemp" id="nombreemp" class="formulario__input" placeholder=" ">
+                            <label for="nombreemp" class="formulario__label">Nombre empresa</label>
+                        </div>
+                    </fieldset> 
+                    <fieldset class="formulario__campo">
+                        <legend>Datos del representante</legend>
+                        <div class="formulario__div">
+                            <input type="number" name="dnirep" id="dnirep" class="formulario__input" placeholder=" ">
+                            <label for="dnirep" class="formulario__label">Dni Represente</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="nomrep" id="nomrep" class="formulario__input" placeholder=" ">
+                            <label for="nomrep" class="formulario__label">Nombres</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="apeprep" id="apeprep" class="formulario__input" placeholder=" ">
+                            <label for="apeprep" class="formulario__label">Apellido Paterno</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="apemrep" id="apemrep" class="formulario__input" placeholder=" ">
+                            <label for="apemrep" class="formulario__label">Apellido Materno</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="email" name="correorep" id="correorep" class="formulario__input" placeholder=" ">
+                            <label for="correorep" class="formulario__label">Correo</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="number" name="telfrep" id="telfrep" class="formulario__input" placeholder=" ">
+                            <label for="telfrep" class="formulario__label">Telefono</label>
+                        </div>
+                    </fieldset> 
+                    <fieldset class="formulario__campo">
+                        <legend>Datos del motor</legend>
+                        <div class="formulario__div">
+                            <input type="text" name="placamot" id="placamot" class="formulario__input" placeholder=" ">
+                            <label for="placamot" class="formulario__label">Placa de motor</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="desmot" id="desmot" class="formulario__input" placeholder=" ">
+                            <label for="desmot" class="formulario__label">Descripción de motor</label>
+                        </div>
+                    </fieldset>   
+                    <fieldset class="formulario__campo">
+                        <legend>Servicio</legend>
+                        <div class="formulario__div">
+                            <select name="area" id="area" class="formulario__select-input">
+                                <option value=""></option>
+                                <option value="produccion">Produccion</option>
+                                <option value="rrhh">RRHH</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="almacen">Almacen</option>
+                                <option value="gerencia">Gerencia</option>
+                                <option value="contabilidad">Contabilidad</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                            <label for="area" class="formulario__select-label">Servicio</label>
+                        </div>
+                        <input type="submit" class="" value="Agregar >>">
+                        <input type="submit" class="" value="Quitar <<">
+                        <textarea>Listado de servicios</textarea>
+                        <textarea>Descripción de servicios</textarea>
+                    </fieldset> 
+                    <fieldset class="formulario__campo">
+                        <legend>Condiciones</legend>
+                        <div class="formulario__div">
+                            <select name="area" id="area" class="formulario__select-input">
+                                <option value=""></option>
+                                <option value="produccion">Produccion</option>
+                                <option value="rrhh">RRHH</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="almacen">Almacen</option>
+                                <option value="gerencia">Gerencia</option>
+                                <option value="contabilidad">Contabilidad</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                            <label for="area" class="formulario__select-label">Tiempo de entrega</label>
+                        </div>
+                        <div class="formulario__div">
+                            <select name="area" id="area" class="formulario__select-input">
+                                <option value=""></option>
+                                <option value="produccion">Produccion</option>
+                                <option value="rrhh">RRHH</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="almacen">Almacen</option>
+                                <option value="gerencia">Gerencia</option>
+                                <option value="contabilidad">Contabilidad</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                            <label for="area" class="formulario__select-label">Forma de pago</label>
+                        </div>
+                        <div class="formulario__div">
+                            <select name="area" id="area" class="formulario__select-input">
+                                <option value=""></option>
+                                <option value="produccion">Produccion</option>
+                                <option value="rrhh">RRHH</option>
+                                <option value="ventas">Ventas</option>
+                                <option value="almacen">Almacen</option>
+                                <option value="gerencia">Gerencia</option>
+                                <option value="contabilidad">Contabilidad</option>
+                                <option value="administrador">Administrador</option>
+                            </select>
+                            <label for="area" class="formulario__select-label">Garantia</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <p class="warnings" id="warnings"></p>
+                <div class="formulario__div-botones" style="text-align:center;">
+                    <input type="submit" class="formulario__boton slide" value="Registrar">
+                    <input type="submit" class="formulario__boton slide" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    function stateCheck($formularioSelectInput){
+        if($formularioSelectInput.val().length > 0) {
+            $formularioSelectInput.addClass('valid');
+        }else{
+            $formularioSelectInput.removeClass('valid');
+        }
+    }
+
+    $(function(){
+
+        $('.formulario__select-input').on('focusout',function(){
+            stateCheck($(this));
+        });
+
+    });
+</script>  
+</html>

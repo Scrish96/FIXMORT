@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/trac_moto.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/ec9265bfa6.js" crossorigin="anonymous"></script>
+  <title>Motores por repara</title>
+</head>
+<body>
+  <div class="plantilla">
+    <div class="fondo">
+      <h2>DETALLE DE TRABAJO</h2>
+      <div>
+        <div>
+          <div class="flex">
+            <div >
+              <label>Orden de Trabajo:</label>
+              <input type="text" disabled value="2659">
+            </div>
+            <div >  
+              <label>Estado:</label>
+              <input type="text" disabled value="COMPLETADO">
+            </div>
+          </div>
+          <div class="flex">
+            <div >
+              <label>Fecha de ingreso:</label>
+              <input type="text" disabled value="10/04/2022">
+            </div>
+            <div >  
+              <label>Fecha de salida:</label>
+              <input type="text" disabled value="15/04/2022">
+            </div>
+          </div>
+          <div class="flex">
+            <div >
+              <label>Cliente:</label>
+              <input type="text" disabled value="Molitalia">
+            </div>
+            <div >
+              <label>Descripción:</label>
+              <input type="text" disabled value="Reparacion de motor por falla electríca.">
+            </div>
+          </div>
+          <div class="flex">
+            <div >
+              <label>Guía de cliente:</label>
+              <input type="text" disabled value="001-2562">
+            </div>
+            <div >
+              <label>Guía de Remisión:</label>
+              <input type="text" disabled value="201-7894">
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <label>Número de placa:</label>
+              <input type="text" disabled value="98925-2">
+            </div>
+            <div>
+              <label>Representante:</label>
+              <input type="text" disabled value="Dylan Bustamante">          
+            </div>
+          </div>
+          <div class="flex">
+            <div>
+              <label>Servicios:</label>
+            </div>
+          </div>
+          <div>
+            <div class="tabla">
+              <table  id ="tblDatos">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Descripción</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+              <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Rebobinado de estator.</td>
+                    <td><input type="checkbox" checked name="estado" id="estado"></td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Cambio de dos rodajes.</td>
+                    <td><input type="checkbox" checked name="estado" id="estado"></td>
+
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Embocinado de 2 tapas Ø32</td>
+                    <td><input type="checkbox" unchecked name="estado" id="estado"></td>
+
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Cambio de 2 anillos Seeger</td>
+                    <td><input type="checkbox" checked name="estado" id="estado"></td>
+
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Plancado de rodete</td>
+                    <td><input type="checkbox" unchecked name="estado" id="estado"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div >
+              <button class="button">Salir</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
