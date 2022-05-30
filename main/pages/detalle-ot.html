@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Persona</title>
+    <link rel="stylesheet" href="./css/det-ot.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tutorial DataTables</title>
+      
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- CSS personalizado --> 
+    <link rel="stylesheet" href="main.css">  
+      
+      
+    <!--datables CSS básico-->
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css"/>
+    <!--datables estilo bootstrap 4 CSS-->  
+    <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+</head>
+<body>
+    <div class="form-content">
+        <div class="l-form"">
+            <form action="" method="POST" id="formulario" class="formulario">
+                <h1 class="formulario__titulo">Detalle Orden de Trabajo</h1>
+                <div class="flexbox">
+                    <div class="formulario__div">
+                        <input type="number" disabled name="dniper" id="dniper" class="formulario__input" placeholder=" " value="0001">
+                        <label for="dniper"  class="formulario__label">Orden de trabajo</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="nombreper"  disabled value="Completado" id="nombreper" class="formulario__input" placeholder=" ">
+                        <label for="nombreper" class="formulario__label">Estado</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="date" name="fecInper" disabled value="2022-06-01" id="fecInper" class="formulario__input" placeholder=" ">
+                        <label for="fecInper" class="formulario__label">Fecha de Ingreso</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="date" name="fecInper" disabled value="2022-07-01" id="fecSadet" class="formulario__input" placeholder=" ">
+                        <label for="fecInper" class="formulario__label">Fecha de Salida</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="correoper" disabled value="Molitalia" id="correoper" class="formulario__input" placeholder=" ">
+                        <label for="correoper" class="formulario__label">Cliente</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="correoper" disabled value="001-2562" id="correoper" class="formulario__input" placeholder=" ">
+                        <label for="correoper" class="formulario__label">Guía de cliente</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="correoper" id="correoper" disabled value="201-2562" class="formulario__input" placeholder=" ">
+                        <label for="correoper" class="formulario__label">Guía de Remisión</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="correoper" id="correoper" disabled value="232131" class="formulario__input" placeholder=" ">
+                        <label for="correoper" class="formulario__label">Número de placa</label>
+                    </div>
+                    <div class="formulario__div">
+                        <input type="text" name="correoper" id="correoper" disabled value="Dylan Bustamante" class="formulario__input" placeholder=" ">
+                        <label for="correoper" class="formulario__label">Representate</label>
+                    </div>
+                </div>
+                <div class="formulario__div-botones" style="text-align:center;">
+                    <input type="submit" class="formulario__boton slide" value="Actualizar Estado">
+                </div>
+                <br>
+                <div class="tabla-contenedor">    
+                        <table id="example" class="tabla">
+                            <thead>
+                                <tr>
+                                    <th>Servicios</th>
+                                    <th>Pieza</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bobinado de motor</td>
+                                    <td>Cobre</td>
+                                    <td>05</td>
+                                </tr>
+                                <tr>
+                                    <td>Cambio de tornillos</td>
+                                    <td>tornillos 15 pulgadas</td>
+                                    <td>20</td>
+                                </tr>                
+                                <tr>
+                                    <td>Bobinado de motor</td>
+                                    <td>Cobre</td>
+                                    <td>41</td>
+                                </tr>
+                                <tr>
+                                    <td>Bobinado de motor</td>
+                                    <td>Cobre</td>
+                                    <td>21</td>
+                                </tr>               
+                            
+                            </tbody>        
+                        </table>         
+                        <div class="pie-tabla">
+                            <div class="lista-elementos">
+                                Ver
+                                <select name="n-entradas" id="n-entradas" class="n-entradas"> 
+                                    <option value="5">5</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="15">15</option>
+                                </select>
+                                filas
+                            </div>
+                            <div class="paginas">
+                                <ul>
+                                    <li><span class="active">1</span></li>
+                                    <li><button>2</button></li>
+                                    <li><button>3</button></li>
+                                    <li><button>4</button></li>
+                                    <li><span>...</span></li>
+                                    <li><button>9</button></li>
+                                    <li><button>10</button></li>
+                                </ul>
+                            </div>
+                        </div>    
+          
+                </div>    
+                <p class="warnings" id="warnings"></p>
+                <div class="formulario__div-botones" style="text-align:center;">
+                    <input type="submit" class="formulario__boton slide" value="Cerrar">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="app.js"></script>
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+      
+    <!-- datatables JS -->
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>    
+     
+    <script type="text/javascript" src="main.js"></script> 
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    function stateCheck($formularioSelectInput){
+        if($formularioSelectInput.val().length > 0) {
+            $formularioSelectInput.addClass('valid');
+        }else{
+            $formularioSelectInput.removeClass('valid');
+        }
+    }
+
+    $(function(){
+
+        $('.formulario__select-input').on('focusout',function(){
+            stateCheck($(this));
+        });
+
+    });
+</script>  
+</html>
