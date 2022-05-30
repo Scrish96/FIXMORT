@@ -62,25 +62,30 @@
                             <label for="desmot" class="formulario__label">Descripción de motor</label>
                         </div>
                     </fieldset>   
-                    <fieldset class="formulario__campo">
+                    <fieldset class="formulario__campo servicio">
                         <legend>Servicio</legend>
-                        <div class="formulario__div">
-                            <select name="area" id="area" class="formulario__select-input">
-                                <option value=""></option>
-                                <option value="produccion">Produccion</option>
-                                <option value="rrhh">RRHH</option>
-                                <option value="ventas">Ventas</option>
-                                <option value="almacen">Almacen</option>
-                                <option value="gerencia">Gerencia</option>
-                                <option value="contabilidad">Contabilidad</option>
-                                <option value="administrador">Administrador</option>
-                            </select>
-                            <label for="area" class="formulario__select-label">Servicio</label>
+                        <div class="grid">
+                            <div class="formulario__div a">
+                                <select name="area" id="area" class="formulario__select-input">
+                                    <option value=""></option>
+                                    <option value="produccion">Produccion</option>
+                                    <option value="rrhh">RRHH</option>
+                                    <option value="ventas">Ventas</option>
+                                    <option value="almacen">Almacen</option>
+                                    <option value="gerencia">Gerencia</option>
+                                    <option value="contabilidad">Contabilidad</option>
+                                    <option value="administrador">Administrador</option>
+                                </select>
+                                <label for="area" class="formulario__select-label">Servicio</label>
+                            </div>
+                            <button type="submit" class="formulario__boton-single slide b"><span>Agregar >></span></button>
+                            <button type="submit" class="formulario__boton-single slide c" ><span>Quitar <<</span></button>
+                            <div class="formulario__div d">
+                                <textarea rows="10" cols="50" class="formulario__input" name="listserv" id="listserv" placeholder=" " ></textarea>
+                                <label for="listserv" class="formulario__label">Listado de servicios</label>
+                            </div>
+                            
                         </div>
-                        <input type="submit" class="" value="Agregar >>">
-                        <input type="submit" class="" value="Quitar <<">
-                        <textarea>Listado de servicios</textarea>
-                        <textarea>Descripción de servicios</textarea>
                     </fieldset> 
                     <fieldset class="formulario__campo">
                         <legend>Condiciones</legend>

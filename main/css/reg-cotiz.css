@@ -95,6 +95,39 @@ input[type=number]::-webkit-outer-spin-button {
     width: 50%;
 }
 
+.servicio{
+    display:block;
+}
+
+.grid{
+    width: 100%;
+    height:250px;
+    display:grid;
+    grid-template-areas:"s ba bq"
+                        "l l l";
+    grid-template-rows: 48px 2fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap:1.5rem;
+}
+
+.grid .a{
+    grid-area: s;
+    width:100%;
+}
+.grid .b{
+    grid-area: ba;
+    width:100%;
+}
+.grid .c{
+    grid-area: bq;
+    width:100%;
+}
+.grid .d{
+    grid-area: l;
+    width:100%;
+    height:100%;
+}
+
 .formulario__div-botones{
     position: relative;
     height:48px;
