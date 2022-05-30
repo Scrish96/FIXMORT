@@ -22,16 +22,27 @@ function esta_mate(){
       $('#content').load('./pages/esta_mate.html');
     });
 }
-
 function mod_piezas_existentes(){
+  $(document).ready(function () {
+    $('#content').load('./pages/mod-piezas-existentes.html');
+  });
+}
+
+function buscar_piezas(){
+  $(document).ready(function () {
+    $('#content').load('./pages/buscar-pieza.html');
+  });
+}
+
+function Agregar_piezas(){
     $(document).ready(function () {
-      $('#content').load('./pages/mod-piezas-existentes.html');
+      $('#content').load('./pages/agregar-pieza.html');
     });
 }
 
 function reg_usuario(){
   $(document).ready(function () {
-    $('#content').load('./pages/registrar-usuario.html');
+    $('#content').load('./pages/buscar-pieza.html');
     
   });
 }
