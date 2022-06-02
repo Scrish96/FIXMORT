@@ -1,25 +1,6 @@
-
-function moto_x_repa(){
-    jQuery(document).ready(function () {
-      $('#content').load('./pages/mot_x_repa.html');
-    });
-}
-
-function moto_repa(){
-    $(document).ready(function () {
-      $('#content').load('./pages/moto_repa.html');
-    });
-}
-
 function detalle_ot(){
     $(document).ready(function () {
       $('#content').load('./pages/detalle-ot.html');
-    });
-}
-
-function esta_mate(){
-    $(document).ready(function () {
-      $('#content').load('./pages/esta_mate.html');
     });
 }
 function mod_piezas_existentes(){
