@@ -1,3 +1,6 @@
+//*Código para toggle de comboBox de Buscar por:
+let area = document.querySelector('#area');
+console.log(area);
 //Código para Datables
 class DataTable{
     element;

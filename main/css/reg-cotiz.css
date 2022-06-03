@@ -253,6 +253,10 @@ legend{
     width: 102%;
 }
 
+.datosMotor > .formulario__div + .formulario__div{
+    width: 102%;
+}
+
 .representante{
     flex-flow: row wrap;
 }
@@ -260,6 +264,12 @@ legend{
 .representante > .formulario__div{
     width:31.7%;
     flex-shrink: 1;
+}
+
+.formulario__campo  .num_tie_entr,
+.formulario__campo  .num_for_pag,
+.formulario__campo  .num_gara{
+    width:16%;
 }
 
 .formulario__boton{

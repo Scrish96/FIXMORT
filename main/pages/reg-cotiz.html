@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
+    <title>Registro de Cotizaciones</title>
     <link rel="stylesheet" href="./css/reg-cotiz.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
 </head>
@@ -51,7 +51,7 @@
                             <label for="telfrep" class="formulario__label">Telefono</label>
                         </div>
                     </fieldset> 
-                    <fieldset class="formulario__campo">
+                    <fieldset class="formulario__campo datosMotor">
                         <legend>Datos del motor</legend>
                         <div class="formulario__div">
                             <input type="text" name="placamot" id="placamot" class="formulario__input" placeholder=" ">
@@ -93,36 +93,42 @@
                     </fieldset> 
                     <fieldset class="formulario__campo">
                         <legend>Condiciones</legend>
-                        <div class="formulario__div">
-                            <select name="area" id="area" class="formulario__select-input">
-                                <option value=""></option>
-                                <option value="3dias">Días</option>
-                                <option value="5dias"></option>
-                                <option value="10dias">10 Días</option>
-                                <option value="15dias">15 Días</option>
-                                <option value="30dias">30 Días</option>
-                                <option value="60dias"> 60 Días</option>
-                            </select>
-                            <label for="area" class="formulario__select-label">Tiempo de entrega</label>
+                        <div class="formulario__div num_tie_entr">
+                            <input type="number" name="num_tie_entr" id="num_tie_entr" class="formulario__input" placeholder=" ">
+                            <label for="num_tie_entr" class="formulario__label">N°</label>
                         </div>
                         <div class="formulario__div">
                             <select name="area" id="area" class="formulario__select-input">
                                 <option value=""></option>
-                                <option value="produccion">7 Días</option>
-                                <option value="rrhh">15 Días</option>
-                                <option value="ventas">30 Días</option>
-                                <option value="almacen">60 Días</option>
+                                <option value="d">Días</option>
+                                <option value="m">Meses</option>
+                                <option value="a">Años</option>
+                            </select>
+                            <label for="area" class="formulario__select-label">Tiem. de entrega</label>
+                        </div>
+                        <div class="formulario__div num_for_pag">
+                            <input type="number" name="num_form_pago" id="num_for_pag" class="formulario__input" placeholder=" ">
+                            <label for="num_form_pago" class="formulario__label">N°</label>
+                        </div>
+                        <div class="formulario__div">
+                            <select name="area" id="area" class="formulario__select-input">
+                                <option value=""></option>
+                                <option value="d">Días</option>
+                                <option value="m">Meses</option>
+                                <option value="a">Años</option>
                             </select>
                             <label for="area" class="formulario__select-label">Forma de pago</label>
                         </div>
+                        <div class="formulario__div num_gara">
+                            <input type="number" name="num_gara" id="num_gara" class="formulario__input" placeholder=" ">
+                            <label for="num_gara" class="formulario__label">N°</label>
+                        </div>
                         <div class="formulario__div">
                             <select name="area" id="area" class="formulario__select-input">
                                 <option value=""></option>
-                                <option value="3m">03 Meses</option>
-                                <option value="6m">06 Meses</option>
-                                <option value="12m">12 Meses</option>
-                                <option value="18m">18 Meses</option>
-                                <option value="24m">24 Meses</option>
+                                <option value="d">Días</option>
+                                <option value="m">Meses</option>
+                                <option value="a">Años</option>
                             </select>
                             <label for="area" class="formulario__select-label">Garantia</label>
                         </div>
