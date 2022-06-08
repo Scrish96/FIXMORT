@@ -1,6 +1,32 @@
+
 //*Código para toggle de comboBox de Buscar por:
-let area = document.querySelector('#area');
-console.log(area);
+
+
+function clickButton(){
+    console.log("'Todos los recursos terminaron de cargar!");
+    let tip_busq = document.getElementById('tip_busq');
+    let input_dni = document.getElementsByClassName('dni');
+    let input_busq = tip_busq.value;
+    console.log(typeof(input_busq));
+    console.log(input_dni);
+    console.log(input_busq);
+    // if(){
+
+    // }
+        switch (input_busq) {
+            case "dni":
+                (input_dni.item)
+                break;
+            case "nom_y_ape":
+                
+            break;
+            default:
+                break;
+        }
+        console.log(tip_busq.options);
+        console.log(input_busq);
+}
+
 //Código para Datables
 class DataTable{
     element;
