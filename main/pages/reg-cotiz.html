@@ -16,7 +16,7 @@
                     <fieldset class="formulario__campo empresa">
                         <legend>Datos de la empresa</legend>
                         <div class="formulario__div">
-                            <input type="number" name="ruc" id="RUC" class="formulario__input" placeholder=" ">
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num_ruc" id="num_ruc" class="formulario__input" placeholder=" " maxlength="11" max="99999999999">
                             <label for="ruc" class="formulario__label">RUC</label>
                         </div>
                         <div class="formulario__div">
@@ -27,7 +27,7 @@
                     <fieldset class="formulario__campo representante">
                         <legend>Datos del representante</legend>
                         <div class="formulario__div">
-                            <input type="number" name="dnirep" id="dnirep" class="formulario__input" placeholder=" ">
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num_dni_repre" id="num_dni_repre" class="formulario__input" placeholder=" " maxlength="8" max="99999999">
                             <label for="dnirep" class="formulario__label">Dni Represente</label>
                         </div>
                         <div class="formulario__div">
@@ -94,8 +94,8 @@
                     <fieldset class="formulario__campo">
                         <legend>Condiciones</legend>
                         <div class="formulario__div num_tie_entr">
-                            <input type="number" name="num_tie_entr" id="num_tie_entr" class="formulario__input" placeholder=" ">
-                            <label for="num_tie_entr" class="formulario__label">N°</label>
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num-tiemp-entrega" id="num-tiemp-entrega" class="formulario__input" placeholder=" " maxlength="2" max="999">
+                            <label for="num-tiemp-entrega" class="formulario__label">N°</label>
                         </div>
                         <div class="formulario__div">
                             <select name="area" id="area" class="formulario__select-input">
@@ -107,8 +107,8 @@
                             <label for="area" class="formulario__select-label">Tiem. de entrega</label>
                         </div>
                         <div class="formulario__div num_for_pag">
-                            <input type="number" name="num_form_pago" id="num_for_pag" class="formulario__input" placeholder=" ">
-                            <label for="num_form_pago" class="formulario__label">N°</label>
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num-forma-pago" id="num-forma-pago" class="formulario__input" placeholder=" " maxlength="2" max="999">
+                            <label for="num-forma-pago" class="formulario__label">N°</label>
                         </div>
                         <div class="formulario__div">
                             <select name="area" id="area" class="formulario__select-input">
@@ -120,8 +120,8 @@
                             <label for="area" class="formulario__select-label">Forma de pago</label>
                         </div>
                         <div class="formulario__div num_gara">
-                            <input type="number" name="num_gara" id="num_gara" class="formulario__input" placeholder=" ">
-                            <label for="num_gara" class="formulario__label">N°</label>
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num-gara" id="num-gara" class="formulario__input" placeholder=" " maxlength="2" max="999">
+                            <label for="num-gara" class="formulario__label">N°</label>
                         </div>
                         <div class="formulario__div">
                             <select name="area" id="area" class="formulario__select-input">
@@ -136,7 +136,7 @@
                 </div>
                 <p class="warnings" id="warnings"></p>
                 <div class="formulario__div-botones" style="text-align:center;">
-                    <input type="submit" class="formulario__boton slide" value="Registrar">
+                    <input type="button" class="formulario__boton slide" value="Registrar" onclick="verInput()">
                     <input type="submit" class="formulario__boton slide" value="Cancelar">
                 </div>
             </form>
@@ -153,15 +153,22 @@
             $formularioSelectInput.addClass('valid');
         }else{
             $formularioSelectInput.removeClass('valid');
-        }
-    }
+        };
+    };
 
     $(function(){
-
         $('.formulario__select-input').on('focusout',function(){
             stateCheck($(this));
         });
-
     });
+    
+    function verInput(){
+        let num_ruc = document.getElementById('num_ruc').value;
+            
+        console.log(num_ruc);
+        
+    }
+
+    
 </script>  
 </html>

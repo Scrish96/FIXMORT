@@ -24,38 +24,38 @@
 </head>
 <body>
     <div class="form-content">
-        <div class="l-form"">
+        <div class="l-form">
             <form action="" method="POST" id="formulario" class="formulario">
                 <h1 class="formulario__titulo">Búsqueda de Persona</h1>
                 <div class="flexbox">
                     <div class="formulario__div">
-                        <select name="area" id="area" class="formulario__select-input">
+                        <select name="tip_busq" id="tip_busq" class="formulario__select-input" onchange="oppearInput()">
                             <option value=""></option>
-                            <option value="produccion">D.N.I.</option>
-                            <option value="rrhh">Nombre y Apellidos</option>
+                            <option value="dni">D.N.I.</option>
+                            <option value="nom_y_ape">Nombre y Apellidos</option>
                         </select>
-                        <label for="area" class="formulario__select-label">Buscar por:</label>
+                        <label for="tip_busq" class="formulario__select-label">Buscar por:</label>
                     </div>
-                    <div class="formulario__div">
+                    <div class="formulario__div dni">
                         <input type="number" name="dni" id="dni" class="formulario__input" placeholder=" ">
                         <label for="dni" class="formulario__label">D.N.I.</label>
                     </div>
-                    <div class="formulario__div">
-                    <div style="text-align:center;">
-                        <button type="submit" class="formulario__boton-single slide"><span>Buscar Persona</span></button>
-                    </div>
-                    </div>
-                    <div class="formulario__div">
+                    <div class="formulario__div nombre" style="display:none">
                         <input type="text" name="nombre" id="nombre" class="formulario__input" placeholder=" ">
                         <label for="nombre" class="formulario__label">Nombres</label>
                     </div>
-                    <div class="formulario__div">
+                    <div class="formulario__div apePate" style="display:none">
                         <input type="text" name="apePaterno" id="apePaterno" class="formulario__input" placeholder=" ">
                         <label for="apePaterno" class="formulario__label">Apellido Paterno</label>
                     </div>
-                    <div class="formulario__div">
+                    <div class="formulario__div apeMate" style="display:none">
                         <input type="text" name="apeMaterno" id="apeMaterno" class="formulario__input" placeholder=" ">
                         <label for="apeMaterno" class="formulario__label">Apellido Materno</label>
+                    </div>
+                    <div class="formulario__div">
+                        <div style="text-align:center;">
+                            <button type="submit" class="formulario__boton-single slide"><span>Buscar Persona</span></button>
+                        </div>
                     </div>
                 </div>
                 <div class="tabla-contenedor">    
@@ -173,7 +173,7 @@
     <!-- datatables JS -->
     <script type="text/javascript" src="datatables/datatables.min.js"></script>    
      
-    <script type="text/javascript" src="main.js"></script> 
+    <script type="text/javascript" src="./js/buscar-persona.js"></script> 
 </body>
 <script src="jquery.min.js"></script>
 <script>
