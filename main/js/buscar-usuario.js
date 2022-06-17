@@ -1,3 +1,4 @@
+
 //*Código para toggle de comboBox de Buscar por:
     console.log("Todos los recursos terminaron de cargar!");
     function oppearInput(){
@@ -31,7 +32,6 @@
                 break;
         }
     }
-
 
 //Código para Datables
 class DataTable{

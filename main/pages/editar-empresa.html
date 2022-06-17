@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cotizaciones</title>
+    <link rel="stylesheet" href="./css/reg-cotiz.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-content">
+        <div class="l-form">
+            <form action="" method="POST" id="formulario" class="formulario">
+                <h1 class="formulario__titulo">Editar de Empresa</h1>
+                <div class="flexbox">
+                    <fieldset class="formulario__campo empresa">
+                        <legend>Datos de la empresa</legend>
+                        <div class="formulario__div">
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num_ruc" id="num_ruc" class="formulario__input" placeholder=" " maxlength="11" max="99999999999">
+                            <label for="ruc" class="formulario__label">RUC</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="nombreemp" id="nombreemp" class="formulario__input" placeholder=" ">
+                            <label for="nombreemp" class="formulario__label">Nombre</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="nombreemp" id="nombreemp" class="formulario__input" placeholder=" ">
+                            <label for="nombreemp" class="formulario__label">Numero de Contacto</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="formulario__campo representante">
+                        <legend>Datos del representante</legend>
+                        <div class="formulario__div">
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="num_dni_repre" id="num_dni_repre" class="formulario__input" placeholder=" " maxlength="8" max="99999999">
+                            <label for="dnirep" class="formulario__label">Dni Represente</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="nomrep" id="nomrep" class="formulario__input" placeholder=" ">
+                            <label for="nomrep" class="formulario__label">Nombres</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="apeprep" id="apeprep" class="formulario__input" placeholder=" ">
+                            <label for="apeprep" class="formulario__label">Apellido Paterno</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="text" name="apemrep" id="apemrep" class="formulario__input" placeholder=" ">
+                            <label for="apemrep" class="formulario__label">Apellido Materno</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="email" name="correorep" id="correorep" class="formulario__input" placeholder=" ">
+                            <label for="correorep" class="formulario__label">Correo</label>
+                        </div>
+                        <div class="formulario__div">
+                            <input type="number" name="telfrep" id="telfrep" class="formulario__input" placeholder=" ">
+                            <label for="telfrep" class="formulario__label">Telefono</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <p class="warnings" id="warnings"></p>
+                <div class="formulario__div-botones" style="text-align:center;">
+                    <input type="button" class="formulario__boton slide" value="Grabar" onclick="verInput()">
+                    <input type="submit" class="formulario__boton slide" value="Cancelar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    function stateCheck($formularioSelectInput) {
+        if ($formularioSelectInput.val().length > 0) {
+            $formularioSelectInput.addClass('valid');
+        } else {
+            $formularioSelectInput.removeClass('valid');
+        };
+    };
+
+    $(function() {
+        $('.formulario__select-input').on('focusout', function() {
+            stateCheck($(this));
+        });
+    });
+
+    function verInput() {
+        let num_ruc = document.getElementById('num_ruc').value;
+
+        console.log(num_ruc);
+
+    }
+</script>
+
+</html>
